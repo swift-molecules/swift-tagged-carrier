@@ -80,6 +80,19 @@ extension `Tagged + Carrier Tests`.`Edge Case` {
 extension `Tagged + Carrier Tests`.Integration {
 
     @Test
+    func `test support supplies collection self-carriers`() {
+        let array = [1, 2, 3]
+        let contiguous = ContiguousArray(array)
+        let dictionary = ["answer": 42]
+        let set = Set(array)
+
+        #expect(array.underlying == array)
+        #expect(contiguous.underlying == contiguous)
+        #expect(dictionary.underlying == dictionary)
+        #expect(set.underlying == set)
+    }
+
+    @Test
     func `single-level Tagged conforms to Carrier with Underlying == Int`() {
         let tagged: Tagged<Tag1, Int> = 42
         let underlying = describeIntCarrier(tagged)
