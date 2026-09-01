@@ -46,6 +46,7 @@ let package = Package(
                     package: "swift-tagged"
                 ),
                 .product(name: "Carrier", package: "swift-carrier"),
+                .product(name: "Carrier Protocol", package: "swift-carrier"),
                 .product(
                     name: "Carrier Standard Library Integration",
                     package: "swift-carrier"
