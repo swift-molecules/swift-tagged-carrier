@@ -33,6 +33,7 @@ let package = Package(
             dependencies: [
                 .product(name: "Tagged", package: "swift-tagged"),
                 .product(name: "Carrier", package: "swift-carrier"),
+                .product(name: "Carrier Protocol", package: "swift-carrier"),
             ]
         ),
         .testTarget(

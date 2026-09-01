@@ -1,4 +1,5 @@
 public import Carrier
+public import Carrier_Protocol
 public import Tagged
 
 extension Tagged: @retroactive Carrier.`Protocol`
